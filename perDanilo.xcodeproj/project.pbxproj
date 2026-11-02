@@ -27,6 +27,7 @@
 		E20A2302307FB47F00573682 /* perDanilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perDanilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20A2313307FB48100573682 /* perDaniloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = perDaniloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20A231D307FB48100573682 /* perDaniloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = perDaniloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20A2331307FB48100573682 /* perDanilo/BuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = perDanilo/BuildSettings.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -76,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				E20A2304307FB47F00573682 /* perDanilo */,
+				E20A2331307FB48100573682 /* perDanilo/BuildSettings.xcconfig */,
 				E20A2316307FB48100573682 /* perDaniloTests */,
 				E20A2320307FB48100573682 /* perDaniloUITests */,
 				E20A2303307FB47F00573682 /* Products */,
@@ -385,17 +387,20 @@
 		};
 		E20A2328307FB48100573682 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E20A2331307FB48100573682 /* perDanilo/BuildSettings.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = perDanilo/perDanilo.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "perDanilo/perDanilo-macos.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"perDanilo/Preview Content\"";
-				DEVELOPMENT_TEAM = RWCV2Z9LY6;
+				DEVELOPMENT_TEAM = WNDLG2L87M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_TMDB_READ_ACCESS_TOKEN = "$(TMDB_READ_ACCESS_TOKEN)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -424,17 +429,20 @@
 		};
 		E20A2329307FB48100573682 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E20A2331307FB48100573682 /* perDanilo/BuildSettings.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = perDanilo/perDanilo.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "perDanilo/perDanilo-macos.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"perDanilo/Preview Content\"";
-				DEVELOPMENT_TEAM = RWCV2Z9LY6;
+				DEVELOPMENT_TEAM = WNDLG2L87M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_TMDB_READ_ACCESS_TOKEN = "$(TMDB_READ_ACCESS_TOKEN)";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
